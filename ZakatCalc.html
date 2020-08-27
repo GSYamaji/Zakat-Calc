@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Zakat Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="ZakatCalc.css">
+  <script type="text/javascript">
+      //Variables
+    // function myFunction()
+    // {
+        // debugger;
+        // let firstNum = document.getElementById("cash"),
+        // secondNum = document.getElementById("GS"),
+        // ThirdNum = document.getElementById("Property"),
+        // fourthNum = document.getElementById("Pensions"),
+        // fifthNum = document.getElementById("Shares"),
+        // sixthNum = document.getElementById("Investments"),
+        // seventhNum = document.getElementById("givenloan"),
+        // eighthNum = document.getElementById("BusinessValue"),
+        // ninthNum = document.getElementById("unpaiddebts"),
+        // tenthNum = document.getElementById("BusinessDebts"),
+        // TAssets = document.getElementById("TAssets"),
+        // TLiabale = document.getElementById("TLiabale"),
+        // TZakatable = document.getElementById("TZakatable"),
+        // Zakat = document.getElementById("Zakat");
+
+        //Event Listeners
+        firstNum.addEventListener("input", mainFunction);
+        secondNum.addEventListener("input", mainFunction);
+        ThirdNum.addEventListener("input", mainFunction);
+        fourthNum.addEventListener("input", mainFunction);
+        fifthNum.addEventListener("input", mainFunction);
+        sixthNum.addEventListener("input", mainFunction);
+        seventhNum.addEventListener("input", mainFunction);
+        eighthNum.addEventListener("input", mainFunction);
+        ninthNum.addEventListener("input", mainFunction);
+        tenthNum.addEventListener("input", mainFunction);
+        TAssets.addEventListener("input", mainFunction);
+        TLiabale.addEventListener("input", mainFunction);
+        TZakatable.addEventListener("input", mainFunction);
+        Zakat.addEventListener("input", mainFunction);
+        //Main JavaScript
+        function mainFunction()
+        {
+            debugger;
+        let firstNum = document.getElementById("cash"),
+        secondNum = document.getElementById("GS"),
+        ThirdNum = document.getElementById("Property"),
+        fourthNum = document.getElementById("Pensions"),
+        fifthNum = document.getElementById("Shares"),
+        sixthNum = document.getElementById("Investments"),
+        seventhNum = document.getElementById("givenloan"),
+        eighthNum = document.getElementById("BusinessValue"),
+        ninthNum = document.getElementById("unpaiddebts"),
+        tenthNum = document.getElementById("BusinessDebts"),
+        TAssets = document.getElementById("TAssets"),
+        TLiabale = document.getElementById("TLiabale"),
+        TZakatable = document.getElementById("TZakatable"),
+        Zakat = document.getElementById("Zakat");
+            var one = +firstNum.value||0;  // convert to number
+            var two = +secondNum.value||0; // convert to number
+            var three = +ThirdNum.value||0; // convert to number
+            var four = +fourthNum.value||0; // convert to number
+            var five = +fifthNum.value||0; // convert to number
+            var six = +sixthNum.value||0; // convert to number
+            var seven = +seventhNum.value||0; // convert to number
+            var eight = +eighthNum.value||0; // convert to number
+            var nine = +ninthNum.value||0; // convert to number
+            var ten = +tenthNum.value||0; // convert to number
+            // this is the shorter than what you are using 
+            TAssets.innerHTML = one + two + three + four + five + six + seven + eight;
+            TLiabale.innerHTML = nine + ten;
+            TZakatable.innerHTML = one + two + three + four + five + six + seven + eight - nine - ten;
+            Zakat.innerHTML = (one + two + three + four + five + six + seven + eight - nine - ten) * 0.025;
+        }
+    // }
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="https://muslimhands.org.uk/"><img src="logo.jpg" alt="Muslimhands Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="true" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>  
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Appeals</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">   Our Work   </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">   Zakat  </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">   Orphans    </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">   Latest    </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">   About Us   </a>
+        </li>
+    </ul>   
+  </div>
+  <ul class="navbar-nav navbar-right" style="border: none;">
+    <form class="form-inline navbar-right" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-warning" type="submit">Search</button>
+    </form>
+  </ul>
+</nav>
+<div class="container-fluid" id="banner">   
+    <p>Zakat Calculator</p>
+</div>
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col-md-8" id="calculator">
+            <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="cash">Cash at Home/Bank</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="cash" name="cash" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="GS">Gold And Silver</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="GS" name="GS" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Property">Property(Other Than Home)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="Property" name="Property" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Pensions">Pensions</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="Pensions" name="Pensions" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Shares">Shares</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="Shares" name="Shares" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Investments">Other Investments</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="Investments" name="Investments" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="givenloan">Money Owed To You</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="givenloan" name="givenloan" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="BusinessValue">Business Value</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="BusinessValue" name="BusinessValue" placeholder="Amount In $">
+                    </div>
+                </div>
+            </form>
+            <form style="border-top: 1px solid burlywood; padding-bottom:30px;border-bottom: 1px solid burlywood;" >
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="unpaiddebts">Unpaid Debts</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="unpaiddebts" name="unpaiddebts" placeholder="Amount In $">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="BusinessDebts">Business Debts</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" id="BusinessDebts" name="BusinessDebts" placeholder="Amount In $">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary" onclick="mainFunction()">Submit</button>
+            </form>
+            <div class="container" id="total" >
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <h3>Total Zakat =</h3>
+                    </div>
+                    <div class="col-md-2"><p id="Zakat"></p> </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container-fluid" style="background-color: #cce6ff;">
+                <div class="row" id="add"></div>
+                <div class="row">
+                    <div class="col-md-6" style="padding: 1em;">
+                        <centre>
+                            <h4>Gold Nisab</h4>
+                            <p>$3847.37<br>(87.5g)</p>
+                        </centre>
+                    </div>
+                    <div class="col-md-6" style="padding: 1em; border-left:1px solid #2cb7d8 ;" >
+                        <h4>Silver Nisab</h4>
+                        <p>$245.37<br>(625g)</p>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid #2cb7d8;border-bottom: 1px solid #2cb7d8;" ><p style="padding-top: 15px; padding-left: 30px;">Nisab Values Are Updated Regularly</p></div>
+                <div>
+                    <h3 style="padding: 15px 26px;">Your Zakat Summary</h3>
+                    <h5>Total Assets:</h5>
+                    <p id="TAssets"></p>
+                    <h5>Less Total Liabilities:</h5>
+                    <p id="TLiabale"></p>
+                    <h5>Equal Total Zakatable:</h5>
+                    <p id="TZakatable"></p>
+                    <h5>Zakat to Pay:</h5>
+                    <p id="Zakat"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
